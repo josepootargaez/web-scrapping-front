@@ -1,0 +1,31 @@
+
+
+<!-- Toolbar -->
+<div class="bg-primary text-center p-2">
+  <h1 class="text-second">Web Scrapping</h1>
+</div>
+
+<div class="content" role="main">
+<div class="container text-center">
+  <h3 class="text-primary mt-4">Soriana</h3>
+  <div class="loading" *ngIf="loading">
+    <img src="../assets/images/spinner.gif" alt="loading">
+</div>
+  <table class="table table-bordered" *ngIf="list">
+    <thead class="table-dark">
+     <tr>
+      <th scope="col">Departamento</th>
+      <th scope="col">url</th>
+    </tr>
+    </thead>
+    
+    <tbody >
+      <tr   *ngFor="let item of list.result">
+         <td><p>{{item.department}}</p></td>
+         <td><p><a href="{{item.url}}" target="_blank">{{item.url}}</a></p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
